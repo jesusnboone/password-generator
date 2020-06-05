@@ -40,16 +40,19 @@ function generatePassword() {
   var lowercharrandom = lowerchar[Math.floor(Math.random() * lowerchar.length)];
   var uppercharrandom = upperchar[Math.floor(Math.random() * upperchar.length)];
 
-  console.log(specharrandom);
-  console.log(numrandom);
-  console.log(lowercharrandom);
-  console.log(uppercharrandom);
+  var ranchargen = [specharrandom,numrandom,lowercharrandom,uppercharrandom];
 
-  var passwordgen = [specharrandom,numrandom,lowercharrandom,uppercharrandom]
+  var trueranchar = ranchargen[Math.floor(Math.random() * ranchargen.length)];
 
-  var passwordgenfinal = passwordgen[Math.floor(Math.random() * passwordgen.length)];
+  console.log(trueranchar)
+  console.log(trueranchar)
+  console.log(trueranchar)
+  console.log(trueranchar)
 
-  return passwordgenfinal
+  return trueranchar
+
+
+
 }
 
 
