@@ -13,30 +13,30 @@ function generatePassword() {
   }
   
   if (passLength >=8 && passLength < 128) {
-  var spechar = confirm("Would you like to include special characters?");
+  var speChar = confirm("Would you like to include special characters?");
   var num = confirm("Would you like to include numbers?");
-  var lowerchar = confirm("Would you like to include lowercase letters?");
-  var upperchar = confirm("Would you like to include uppercase characters?");
+  var lowerChar = confirm("Would you like to include lowercase letters?");
+  var upperChar = confirm("Would you like to include uppercase characters?");
   }
   
   var passLength=passLength;
 
-  if (spechar === true && num === true && lowerchar === true && upperchar === true) {
+  if (speChar === true && num === true && lowerChar === true && upperChar === true) {
   var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()";
   }
 
-  if (spechar === false && num === true && lowerchar === true && upperchar === true) {
+  if (speChar === false && num === true && lowerChar === true && upperChar === true) {
     var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
   }
-  if (spechar === false && num === false && lowerchar === true && upperchar === true){
+  if (speChar === false && num === false && lowerChar === true && upperChar === true){
     var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   }
 
-  if (spechar === false && num === false && lowerchar === false && upperchar === true) {
+  if (speChar === false && num === false && lowerChar === false && upperChar === true) {
     var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
 
-  if (spechar === false && num === false && lowerchar === false && upperchar === false) {
+  if (speChar === false && num === false && lowerChar === false && upperChar === false) {
     var criteria = ""
   }
   var password = "";
