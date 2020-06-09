@@ -22,21 +22,54 @@ function generatePassword() {
   var passLength=passLength;
 
   if (speChar === true && num === true && lowerChar === true && upperChar === true) {
-  var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()";
+  var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()"
   }
 
-  if (speChar === false && num === true && lowerChar === true && upperChar === true) {
-    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-  }
-  if (speChar === false && num === false && lowerChar === true && upperChar === true){
-    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  else if (speChar === false && num === true && lowerChar === true && upperChar === true) {
+    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
   }
 
-  if (speChar === false && num === false && lowerChar === false && upperChar === true) {
-    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  else if (speChar === true && num === false && lowerChar === true && upperChar === true) {
+    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()"
   }
 
-  if (speChar === false && num === false && lowerChar === false && upperChar === false) {
+  else if (speChar === true && num === false && lowerChar === true && upperChar === false) {
+    var criteria = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()"
+  }
+
+  else if (speChar === false && num === false && lowerChar === true && upperChar === true) {
+    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+  }
+
+  else if (speChar === false && num === false && lowerChar === false && upperChar === true) {
+    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  }
+
+  else if (speChar === true && num === true && lowerChar === true && upperChar === false) {
+    var criteria = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()"
+  }
+
+  else if (speChar === false && num === true && lowerChar === true && upperChar === false) {
+    var criteria = "abcdefghijklmnopqrstuvwxyz1234567890"
+  }
+
+  else if (speChar === false && num === false && lowerChar === true && upperChar === false) {
+    var criteria = "abcdefghijklmnopqrstuvwxyz"
+  }
+
+  else if (speChar === true && num === true && lowerChar === false && upperChar === false) {
+    var criteria = "1234567890!@#$%^&*()"
+  }
+
+  else if (speChar === false && num === true && lowerChar === false && upperChar === false) {
+    var criteria = "1234567890"
+  }
+
+  else if (speChar === true && num === false && lowerChar === false && upperChar === false) {
+    var criteria = "!@#$%^&*()"
+  }
+
+  else if (speChar === false && num === false && lowerChar === false && upperChar === false) {
     var criteria = ""
   }
   var password = "";
