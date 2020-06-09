@@ -45,6 +45,18 @@ function generatePassword() {
     var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   }
 
+  else if (speChar === true && num === true && lowerChar === false && upperChar === true) {
+    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()"
+  }
+
+  else if (speChar === false && num === true && lowerChar === false && upperChar === true) {
+    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+  }
+
+  else if (speChar === true && num === false && lowerChar === false && upperChar === true) {
+    var criteria = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()"
+  }
+
   else if (speChar === true && num === true && lowerChar === true && upperChar === false) {
     var criteria = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()"
   }
